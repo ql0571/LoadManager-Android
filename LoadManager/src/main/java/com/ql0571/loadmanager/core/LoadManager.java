@@ -42,6 +42,10 @@ public class LoadManager {
         return new LoadService(targetContext, onReloadListener, builder);
     }
 
+    public LoadService register(Object target) {
+        return register(target, null);
+    }
+
     public static Builder beginBuilder() {
         return new Builder();
     }

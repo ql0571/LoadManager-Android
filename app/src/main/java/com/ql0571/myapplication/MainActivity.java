@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ql0571.myapplication.activity.NormalActivity;
+import com.ql0571.myapplication.activity.PlaceholderActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void inActivity(View view) {
         startActivity(new Intent(this, NormalActivity.class));
+    }
+
+    public void showPlaceholder(View view) {
+        startActivity(new Intent(this, PlaceholderActivity.class));
     }
 }

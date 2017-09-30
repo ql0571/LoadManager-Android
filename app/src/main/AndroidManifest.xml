@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".activity.NormalActivity" />
+        <activity android:name=".activity.PlaceholderActivity" />
     </application>
 
 </manifest>
