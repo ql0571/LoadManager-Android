@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.widget.FrameLayout;
 
 import com.ql0571.loadmanager.callback.LoadCallback;
+import com.ql0571.loadmanager.core.LoadManagerException;
 import com.ql0571.loadmanager.utils.LoadUtil;
 
 import java.util.HashMap;
@@ -53,8 +54,7 @@ public class LoadLayout extends FrameLayout {
 
     public void showCallback(final Class<? extends LoadCallback> callback) {
         if (!callbacks.containsKey(callback)) {
-            throw new IllegalArgumentException(String.format("The Callback (%s) is nonexistent.", callback
-                    .getSimpleName()));
+            throw new LoadManagerException("callback 未找到："+callback.getName());
         }
         if (LoadUtil.isMainThread()) {
             showCallbackView(callback);

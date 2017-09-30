@@ -22,18 +22,14 @@ public class NormalActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
-        // Your can change the callback on sub thread directly.
         loadService = LoadManager.getDefault().register(this, new LoadCallback.OnReloadListener() {
             @Override
             public void onReload(View v) {
-                // Your can change the status out of Main thread.
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         loadService.showCallback(LoadingCallback.class);
-                        //do retry logic...
                         SystemClock.sleep(500);
-                        //callback
                         loadService.showSuccess();
                     }
                 }).start();

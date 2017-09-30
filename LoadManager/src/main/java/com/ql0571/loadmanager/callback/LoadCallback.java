@@ -52,17 +52,6 @@ public abstract class LoadCallback implements Serializable, Cloneable {
                 }
             });
         }
-
-//        rootView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(reloadEnable) {
-//                    if (onReloadListener != null) {
-//                        onReloadListener.onReload(v);
-//                    }
-//                }
-//            }
-//        });
         return rootView;
     }
 

@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ql0571.loadmanager.core.LoadManagerException;
 import com.ql0571.loadmanager.core.TargetContext;
 
 /**
@@ -29,7 +30,7 @@ public class LoadUtil {
             contentParent = (ViewGroup) (view.getParent());
             context = view.getContext();
         } else {
-            throw new IllegalArgumentException("The target must be within Activity, Fragment, View.");
+            throw new LoadManagerException("target必须为view或activity");
         }
         int childIndex = 0;
         int childCount = contentParent == null ? 0 : contentParent.getChildCount();
@@ -46,8 +47,7 @@ public class LoadUtil {
             oldContent = contentParent != null ? contentParent.getChildAt(0) : null;
         }
         if (oldContent == null) {
-            throw new IllegalArgumentException(String.format("enexpected error when register LoadSir in %s", target
-                    .getClass().getSimpleName()));
+            throw new LoadManagerException("原视图未找到"+target.getClass().getName());
         }
         if (contentParent != null) {
             contentParent.removeView(oldContent);

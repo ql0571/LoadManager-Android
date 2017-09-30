@@ -42,12 +42,6 @@ public class LoadManager {
         return new LoadService(targetContext, onReloadListener, builder);
     }
 
-//    public <T> LoadService register(Object target, Callback.OnReloadListener onReloadListener, Convertor<T>
-//            convertor) {
-//        TargetContext targetContext = LoadSirUtil.getTargetContext(target);
-//        return new LoadService<>(convertor, targetContext, onReloadListener, builder);
-//    }
-
     public static Builder beginBuilder() {
         return new Builder();
     }
