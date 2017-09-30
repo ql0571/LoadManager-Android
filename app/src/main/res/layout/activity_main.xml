@@ -8,14 +8,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="inActivity"
-        android:text="Activity(empty)"
+        android:text="Activity(默认)"
         android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="showPlaceholder"
-        android:text="Activity(placeholder)"
+        android:text="Activity(占位图)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="inFragment"
+        android:text="Fragment(默认)"
         android:textAllCaps="false" />
 
 </LinearLayout>

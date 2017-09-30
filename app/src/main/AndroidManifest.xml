@@ -20,6 +20,7 @@
 
         <activity android:name=".activity.NormalActivity" />
         <activity android:name=".activity.PlaceholderActivity" />
+        <activity android:name=".activity.FragmentActivity" />
     </application>
 
 </manifest>

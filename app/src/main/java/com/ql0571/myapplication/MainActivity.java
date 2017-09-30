@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ql0571.myapplication.activity.FragmentActivity;
 import com.ql0571.myapplication.activity.NormalActivity;
 import com.ql0571.myapplication.activity.PlaceholderActivity;
 
@@ -22,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void showPlaceholder(View view) {
         startActivity(new Intent(this, PlaceholderActivity.class));
+    }
+
+    public void inFragment(View view) {
+        startActivity(new Intent(this, FragmentActivity.class));
     }
 }
